@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("#img_dona").addEventListener("click", modificarBorde);
+  const ingresarBtn = document.getElementById("ingresar-btn");
+  ingresarBtn.addEventListener("click", ingresar);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -8,21 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", verificar);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const ingresarBtn = document.querySelector("#ingresar-btn");
-  ingresarBtn.addEventListener("click", ingresar);
-});
-
-const modificarBorde = () => {
-  const foto_dona = document.querySelector("#img_dona");
-  if (foto_dona.style.border === "2px solid red") {
-    foto_dona.style.border = "";
-  } else {
-    foto_dona.style.border = "2px solid red";
-  }
-};
-
-// Desafio parte 2
 const verificar = () => {
   const cant1 = parseInt(document.querySelector("#cantidad_1").value);
   const cant2 = parseInt(document.querySelector("#cantidad_2").value);
@@ -53,5 +39,3 @@ const validarNumero = (numero) => {
 document
   .getElementById("#boton_verificar")
   .addEventListener("click", verificar);
-
-// Desafio parte 3 lo separé de JS para ser más claro conmigo
