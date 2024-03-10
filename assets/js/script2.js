@@ -1,3 +1,5 @@
+//Ejercicio 2
+
 document.addEventListener("DOMContentLoaded", function () {
   const verificar = () => {
     const cant1 = parseInt(document.getElementById("cantidad_1").value);

@@ -1,3 +1,5 @@
+//Ejercicio 3
+
 const select1 = document.getElementById("select1");
 const select2 = document.getElementById("select2");
 const select3 = document.getElementById("select3");
