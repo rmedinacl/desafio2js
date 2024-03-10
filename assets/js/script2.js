@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", verificar);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const ingresarBtn = document.querySelector("#ingresar-btn");
+  ingresarBtn.addEventListener("click", ingresar);
+});
+
 const modificarBorde = () => {
   const foto_dona = document.querySelector("#img_dona");
   if (foto_dona.style.border === "2px solid red") {
@@ -45,44 +50,8 @@ const validarNumero = (numero) => {
   return numero > 0 && numero <= 10;
 };
 
-document.querySelector("#boton_verificar").addEventListener("click", verificar);
-
 document
-  .querySelector("#cantidad_1")
-  .insertAdjacentHTML(
-    "afterend",
-    "<p style='font-size: 0.8em; color: #777;'>(Ingresar valor entre 1 y 10)</p>"
-  );
-document
-  .querySelector("#cantidad_2")
-  .insertAdjacentHTML(
-    "afterend",
-    "<p style='font-size: 0.8em; color: #777;'>(Ingresar valor entre 1 y 10)</p>"
-  );
-document
-  .querySelector("#cantidad_3")
-  .insertAdjacentHTML(
-    "afterend",
-    "<p style='font-size: 0.8em; color: #777;'>(Ingresar valor entre 1 y 10)</p>"
-  );
+  .getElementById("#boton_verificar")
+  .addEventListener("click", verificar);
 
-// Desafio parte 3
-
-const ingresar = () => {
-  const digito1 = document.querySelector("#pass_1").value;
-  const digito2 = document.querySelector("#pass_2").value;
-  const digito3 = document.querySelector("#pass_3").value;
-
-  const password = digito1 + digito2 + digito3;
-
-  if (password == "911") {
-    document.querySelector("#mensaje").innerHTML = "Password 1 = correcto";
-  } else if (password == "714") {
-    document.querySelector("#mensaje").innerHTML = "Password 2 =  correcto";
-  } else {
-    document.querySelector("#mensaje").innerHTML = "Password incorrecto";
-  }
-};
-
-const ingresarBtn = document.querySelector("#ingresar-btn");
-ingresarBtn.addEventListener("click", ingresar);
+// Desafio parte 3 lo separé de JS para ser más claro conmigo
